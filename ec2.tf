@@ -9,10 +9,6 @@ resource "aws_instance" "Demo" {
     Name = "demo"
   }
   
-  output "instance_public_ip" {
-  value = aws_instance.example.public_ip
-}
-  
 user_data = <<EOF
 #!/bin/bash
 echo "Copying the SSH Key Of Jenkins to the server"
