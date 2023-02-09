@@ -6,7 +6,7 @@ resource "aws_instance" "Demo" {
   instance_type = "t2.micro"
   key_name = "aws"
   tags = {
-    Name = "benz"
+    Name = "demo"
   }
 user_data = <<EOF
 #!/bin/bash
