@@ -12,7 +12,7 @@ resource "aws_instance" "Demo" {
 user_data = <<EOF
 #!/bin/bash
 echo "Copying the SSH Key Of Jenkins to the server"
-sudo echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCspqLKo+E+5HB60Vj7Ti838f7x/Vy7QXRDTjMS3pXw5jtVwjroIoqlby3MYxX7pYbKCM79UD8hO7swUk7yBT0TDgQTbzUvA4smOlPCA6fJ4TGiupC/IBrU85+Iq81Hj7RhbICacuHGcA+L6OTAaEMjzJ4NBkbyfaDI8tErxY35EnFHkXM4oUtwQyb4nKawTm5a1sFBq56nSg0i69VrMky2iwpQnkgbIAtdiHmQYZD1sH1qsbiLN515+DQk0CdNIrdquxuRVvgnsOnO0AqCyctwwPLZuLIe1y7Zs8Aww9E3x/IEctHpM/JQHMlWvUthwC4tk5czozdIQe1M1QM2RfOkIfFDBEXg9aIJFs3MbdqCumjudXy0n2Da6WfDBXTN8QMy8+8N3mwdxlquYqa4x7hIQaoLO50zVCZljo9xpcyFDs/pVzpe0y5YLR7OnfcvT9P5GF6jlLQi0v1Yr2/u3aJh+MC4jmZpnTPmgVN4QvDoLba9L/mdpV7fsxj+SJzSaGs= root@ip-172-31-42-86" >> /home/ubuntu/.ssh/authorized_keys
+sudo echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDNYylxy8BXV2ujNVcZGR/mFi0qOTpFoCwJRCUCXgpUYQpM8caNPmY2NNmuUk2hp2yqaqb3DEg05lZ1+65lE8f51D/d25gSLsHmZrTfHG+SKrayTKA9RKb3/nypCpI246mrBXA2we8jN3svWPE5KJyhotuNVbAXdtasBFrKPkD89UCMDwqkvll8B6o2VLtGrIPBdIPwKMwONPh1xCQpYtrdOBfaqq0/t/Ruyuo6UWs7zJk4XzCNB8OgSYBakYEIok40bmyYhXW0Jwi41UJo90rBG/Mjmihju3+1a5VW03gxv+UG09VivVzTWPLTmu8GbmPbwtJcE7goxfmFITWaAjrjt37yjkjmOHC9U1xtRAIKW+ukTIvbtM6EEpDUaFDX+g/SlXbtzkR8gmPV4wfmbDrxmj+eNKc8FgACAaQFXd/Ud8PB0meJDDW+N6J4TVHKuRxZ//jPLAxaDwK/6+hZ8X6V0cQJRf+XNfkHixjhXb2LfHJoEsAS8zHY4BCUfx2n7tc= jenkins@ip-172-31-42-86" >> /home/ubuntu/.ssh/authorized_keys
 EOF
 }
 output "vmpublic_ip" {
