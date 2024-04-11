@@ -1,12 +1,12 @@
 provider "aws" {
   region     = "ap-south-1"
 }
-resource "aws_instance" "Demo" {
+resource "aws_instance" "app" {
   ami           = "ami-0597375488017747e"
   instance_type = "t2.micro"
   key_name = "aws"
   tags = {
-    Name = "demo"
+    Name = "app"
   }
   
 user_data = <<EOF
@@ -16,5 +16,5 @@ sudo echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDNYylxy8BXV2ujNVcZGR/mFi0qOTpFo
 EOF
 }
 output "vmpublic_ip" {
-  value = "${aws_instance.Demo.public_ip}"
+  value = "${aws_instance.app.public_ip}"
 }
